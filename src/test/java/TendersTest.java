@@ -9,7 +9,7 @@ public class TendersTest {
             "masowej. W ramach zaoferowanego systemu kopii zapasowych Wykonawca dostarczy sprzęt i licencje oraz wykona jego instalację, " +
             "uruchomienie i wdrożenie produkcyjne w siedzibie Zamawiającego";
 
-    @Test
+    @Test(description = "Get the description from one of tender and compare with expected result")
     public void getTenderDescriptionTest(){
         TendersObject tender = new Adapter().getTender("https://tenders.guru/api/pl/tenders/1");
         Assert.assertEquals(DESCRIPTION_TENDER, tender.getDescription(), "Something goes wrong! The description of tender not equal!");
