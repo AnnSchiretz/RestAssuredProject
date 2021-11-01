@@ -1,8 +1,13 @@
 package adapter;
-import static io.restassured.RestAssured.given;
 
+import com.google.gson.Gson;
+import com.google.gson.GsonBuilder;
 
 public class MainAdapter {
-
-
+    Gson gson;
+    public MainAdapter(){
+        gson = new GsonBuilder()
+                .excludeFieldsWithoutExposeAnnotation()
+                .create();
+    }
 }

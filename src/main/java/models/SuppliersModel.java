@@ -1,21 +1,20 @@
 package models;
+
 import com.google.gson.annotations.Expose;
 import lombok.AllArgsConstructor;
 import lombok.Data;
+import lombok.Getter;
 
 @Data
 @AllArgsConstructor
-public class Location {
+@Getter
+public class SuppliersModel {
 
     @Expose
-    String street;
+    String name;
     @Expose
-    String city;
+    Integer id;
     @Expose
-    String state;
-    @Expose
-    String country;
-    @Expose
-    String timezone;
+    String slug;
 
 }

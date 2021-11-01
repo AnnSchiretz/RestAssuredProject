@@ -3,20 +3,17 @@ package models;
 import com.google.gson.annotations.Expose;
 import lombok.AllArgsConstructor;
 import lombok.Data;
+import lombok.Getter;
 
-@AllArgsConstructor
 @Data
-public class User {
+@AllArgsConstructor
+@Getter
+public class PurchaserModel {
 
     @Expose
     String id;
     @Expose
-    String title;
+    String sid;
     @Expose
-    String firstName;
-    @Expose
-    String lastName;
-    @Expose
-    String picture;
-
+    String name;
 }
